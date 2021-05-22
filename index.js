@@ -11,5 +11,7 @@ app.get('/rberry/:idRaspberry(^CAM[0-9]*)', (req, resp) => {
 });
 
 function retrieveNextEvent(idRasp) {
+  console.log(idRasp);
+  return;
   // gestisci idRasp
 }
