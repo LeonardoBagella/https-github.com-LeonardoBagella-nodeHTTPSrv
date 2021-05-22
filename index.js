@@ -6,10 +6,10 @@ const app = express();
 app.listen(3000);
 console.log('server started on port 3000');
 
-app.get('/', (req, resp) => {
-  resp.send({ name: 'Leonardo', lasName: 'Bagella' });
+app.get('/rberry/:idRaspberry(^CAM[0-9]*)', (req, resp) => {
+  retrieveNextEvent(req.params.idRaspberry);
 });
 
-app.get('/abc/:pippo', (req, resp) => {
-  resp.send(req.params.pippo);
-});
+function retrieveNextEvent(idRasp) {
+  // gestisci idRasp
+}
