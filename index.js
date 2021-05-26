@@ -7,11 +7,11 @@ app.listen(3000);
 console.log('server started on port 3000');
 
 app.get('/:idRaspberry', (req, resp) => {
-  retrieveNextEvent(req.params.idRaspberry);
+  resp.send(retrieveNextEvent(req.params.idRaspberry));
 });
 
 app.get('/rberry/:idRaspberry(^CAM[0-9]+)', (req, resp) => {
-  retrieveNextEvent(req.params.idRaspberry);
+  resp.send(retrieveNextEvent(req.params.idRaspberry));
 });
 
 function retrieveNextEvent(idRasp) {
